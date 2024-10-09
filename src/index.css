@@ -1,0 +1,97 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root  {
+    --background: 287 100% 95%;
+    --foreground: 287 5% 10%;
+    --card: 287 50% 90%;
+    --card-foreground: 287 5% 15%;
+    --popover: 287 100% 95%;
+    --popover-foreground: 287 100% 10%;
+    --primary: 287 100% 95.5%;
+    --primary-foreground: 0 0% 0%;
+    --secondary: 287 30% 70%;
+    --secondary-foreground: 0 0% 0%;
+    --muted: 249 30% 85%;
+    --muted-foreground: 287 5% 35%;
+    --accent: 249 30% 80%;
+    --accent-foreground: 287 5% 15%;
+    --destructive: 0 100% 30%;
+    --destructive-foreground: 287 5% 90%;
+    --border: 287 30% 50%;
+    --input: 287 30% 26%;
+    --ring: 287 100% 95.5%;
+    --radius: 0.75rem;
+  }
+  .dark  {
+    --background: 287 50% 10%;
+    --foreground: 287 5% 90%;
+    --card: 287 50% 10%;
+    --card-foreground: 287 5% 90%;
+    --popover: 287 50% 5%;
+    --popover-foreground: 287 5% 90%;
+    --primary: 287 100% 95.5%;
+    --primary-foreground: 0 0% 0%;
+    --secondary: 287 30% 20%;
+    --secondary-foreground: 0 0% 100%;
+    --muted: 249 30% 25%;
+    --muted-foreground: 287 5% 60%;
+    --accent: 249 30% 25%;
+    --accent-foreground: 287 5% 90%;
+    --destructive: 0 100% 30%;
+    --destructive-foreground: 287 5% 90%;
+    --border: 287 30% 26%;
+    --input: 287 30% 26%;
+    --ring: 287 100% 95.5%;
+    --radius: 0.75rem;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
+body {
+  margin: 0;
+  display: flex;
+  place-items: center;
+  min-width: 320px;
+  min-height: 100vh;
+}
+
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+/* AG Grid Theme Overrides */
+.ag-theme-alpine,
+.ag-theme-alpine-dark {
+  --ag-font-size: 14px;
+  --ag-font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+}
+
+.ag-theme-alpine {
+  --ag-background-color: hsl(var(--background));
+  --ag-foreground-color: hsl(var(--foreground));
+  --ag-border-color: hsl(var(--border));
+  --ag-header-background-color: hsl(var(--muted));
+  --ag-odd-row-background-color: hsl(var(--muted) / 0.3);
+}
+
+.ag-theme-alpine-dark {
+  --ag-background-color: hsl(var(--background));
+  --ag-foreground-color: hsl(var(--foreground));
+  --ag-border-color: hsl(var(--border));
+  --ag-header-background-color: hsl(var(--muted));
+  --ag-odd-row-background-color: hsl(var(--muted) / 0.3);
+}
